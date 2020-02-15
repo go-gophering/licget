@@ -1,28 +1,19 @@
 package licget
 
-type Text struct {
-	Media_type string `json:"media_type"`
-	Title      string `json:"title"`
-	Url        string `json:"url"`
-}
-
-type Identifier struct {
-	Identifier string `json:"identifier"`
-	Scheme     string `json:"scheme"`
-}
-
-type Link struct {
-	Note string `json:"note"`
-	Url  string `json:"url"`
-}
-
 type License struct {
-	Id            string       `json:"id"`
-	Identifiers   []Identifier `json:"identifiers"`
-	Links         []Link       `json:"link"`
-	Name          string       `json:"name"`
-	Other_names   []string     `json:"other_names"`
-	Suberseded_by string       `json:"suberseded_by"`
-	Keywords      []string     `json:"keywords"`
-	Text          Text         `json:"text"`
+	Key            string   `json:"key"`
+	Name           string   `json:"name"`
+	Spdx_id        string   `json:"spdx_id"`
+	Url            string   `json:"url"`
+	Node_id        string   `json:"node_id"`
+	Html_url       string   `json:"html_url"`
+	Description    string   `json:"description"`
+	Implementation string   `json:"implementation"`
+	Permissions    []string `json:"permissions"`
+	Conditions     []string `json:"conditions"`
+	Limitations    []string `json:"limitations"`
+	Body           string   `json:"body"`
+	Featured       bool     `json:"featured"`
 }
+
+type Licenses []License
